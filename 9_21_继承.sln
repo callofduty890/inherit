@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00_访问数据库_验证账号密码", "9_21_继承\00_访问数据库_验证账号密码.csproj", "{C4D2042E-8E52-4413-A52A-FFFF4FA6411D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLHelper", "SQLHelper\SQLHelper.csproj", "{78D949F0-2378-4A94-87C9-54FF51767F3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4D2042E-8E52-4413-A52A-FFFF4FA6411D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D2042E-8E52-4413-A52A-FFFF4FA6411D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D2042E-8E52-4413-A52A-FFFF4FA6411D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D2042E-8E52-4413-A52A-FFFF4FA6411D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D949F0-2378-4A94-87C9-54FF51767F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D949F0-2378-4A94-87C9-54FF51767F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D949F0-2378-4A94-87C9-54FF51767F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D949F0-2378-4A94-87C9-54FF51767F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {999BC8B4-DDAE-41D5-9358-EE922A52133A}
+	EndGlobalSection
+EndGlobal
