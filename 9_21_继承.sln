@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLHelper", "SQLHelper\SQLH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TXT_ClassLibrary", "TXT_ClassLibrary\TXT_ClassLibrary.csproj", "{62FC469C-A1E8-4B5A-B0D7-89067B359B2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INI_ClassLibrary", "INI_ClassLibrary\INI_ClassLibrary.csproj", "{ADCB1EEB-A82C-4F8A-9FA7-E49B386CF8AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{62FC469C-A1E8-4B5A-B0D7-89067B359B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62FC469C-A1E8-4B5A-B0D7-89067B359B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62FC469C-A1E8-4B5A-B0D7-89067B359B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCB1EEB-A82C-4F8A-9FA7-E49B386CF8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCB1EEB-A82C-4F8A-9FA7-E49B386CF8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCB1EEB-A82C-4F8A-9FA7-E49B386CF8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCB1EEB-A82C-4F8A-9FA7-E49B386CF8AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
