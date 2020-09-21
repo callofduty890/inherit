@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLHelper;//引用自己写好的数据库DLL
+using TXT_ClassLibrary;//引用自己写好的数据库DLL
 
 namespace _9_21_继承
 {
@@ -33,17 +34,25 @@ namespace _9_21_继承
             string sql = "select powers from information where account='{0}' and passwords='{1}'";
             sql = string.Format(sql,objAdmin.Account, objAdmin.Passwords);
 
+            //进行数据库操作的日志记录
+            string information =DateTime.Now.ToString() +"： 执行SQL语句 "+sql;
+            Console.WriteLine(information);
+            //向txt中写入信息
+            TXT.write_txt("Log_Save.txt",information);
+
             //向数据库发起请求
             SqlDataReader objReader= SQLHelper.SQLHelper.GetReader(sql);
 
             //判断是否有内容
             if (objReader.Read())
             {
+                TXT.write_txt("Log_Save.txt", DateTime.Now.ToString() + "：SQL查询成功");
                 objAdmin.Powers = (string)objReader["powers"];//获取对应的权限
                 return objAdmin;//取到对应的值，返回对象(账号/密码/权限)
             }
             else
             {
+                TXT.write_txt("Log_Save.txt", DateTime.Now.ToString() + "：SQL查询没有找到对应的账号密码");
                 return objAdmin = null;//返回NULL说明没有对应的账号
             }
 
