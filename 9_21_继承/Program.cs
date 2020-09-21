@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using SQLHelper;//引用自己写好的数据库DLL
 using TXT_ClassLibrary;//引用自己写好的数据库DLL
+using INI_ClassLibrary;//引用自己写好的数据库DLL
+
 
 namespace _9_21_继承
 {
@@ -59,27 +61,49 @@ namespace _9_21_继承
         }
         static void Main(string[] args)
         {
-            //提示输入账号与密码
-            Console.WriteLine("请输入账号:");
-            string account=  Console.ReadLine();
-            Console.WriteLine("请输入密码:");
-            string password = Console.ReadLine();
+            //测试INI的写入操作
 
-            //创建数据对象
-            AdminLogin admin = new AdminLogin();
-            admin.Account = account;
-            admin.Passwords = password;
+            //保存绝对路径
+            string Save_File = System.AppDomain.CurrentDomain.BaseDirectory + "数据库配置.ini";
 
-            //验证账号和密码数据库中是否存在
-            admin = Login(admin);
-            if (admin != null)
-            {
-                Console.WriteLine("登录成功!,您的权限为{0}", admin.Powers);
-            }
-            else
-            {
-                Console.WriteLine("登录失败,请检查账号密码");
-            }
+            Console.WriteLine("Save_File:{0}", Save_File);
+            INI.WritePrivateProfileString("数据库配置信息", "数据库地址", @"DESKTOP-CTV4ATU\SQLSERVER", Save_File);
+            INI.WritePrivateProfileString("数据库配置信息", "数据库名称", "Admin_information", Save_File);
+            INI.WritePrivateProfileString("数据库配置信息", "账号", "Admin", Save_File);
+            INI.WritePrivateProfileString("数据库配置信息", "密码", "123456", Save_File);
+
+            //读取的操作
+            string Server = INI.ContentValue("数据库配置信息", "数据库地址", Save_File);
+            string DataBase = INI.ContentValue("数据库配置信息", "数据库名称", Save_File);
+            string Uid= INI.ContentValue("数据库配置信息", "账号", Save_File);
+            string pwd = INI.ContentValue("数据库配置信息", "密码", Save_File);
+
+            Console.WriteLine("Server={0}", Server);
+            Console.WriteLine("DataBase={0}", DataBase);
+            Console.WriteLine("Uid={0}", Uid);
+            Console.WriteLine("pwd={0}", pwd);
+
+            ////提示输入账号与密码
+            //Console.WriteLine("请输入账号:");
+            //string account=  Console.ReadLine();
+            //Console.WriteLine("请输入密码:");
+            //string password = Console.ReadLine();
+
+            ////创建数据对象
+            //AdminLogin admin = new AdminLogin();
+            //admin.Account = account;
+            //admin.Passwords = password;
+
+            ////验证账号和密码数据库中是否存在
+            //admin = Login(admin);
+            //if (admin != null)
+            //{
+            //    Console.WriteLine("登录成功!,您的权限为{0}", admin.Powers);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("登录失败,请检查账号密码");
+            //}
 
             Console.ReadLine();//卡屏
         }
