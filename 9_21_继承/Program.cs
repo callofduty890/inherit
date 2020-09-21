@@ -12,7 +12,7 @@ using INI_ClassLibrary;//引用自己写好的数据库DLL
 namespace _9_21_继承
 {
     //定义一个数据类
-    class AdminLogin
+    class AdminLogin   //等同于 class AdminLogin:Object
     {
         private string account;//账号
         private string passwords;//密码
@@ -21,6 +21,20 @@ namespace _9_21_继承
         public string Account { get => account; set => account = value; }
         public string Passwords { get => passwords; set => passwords = value; }
         public string Powers { get => powers; set => powers = value; }
+    } // [基类/父类]
+
+    class AdminLoginEx : AdminLogin //   [派生类/子类]
+    {
+        private string _name;//拥有人姓名
+        private string _phone_Number;//电话号码
+
+        public string Name { get => _name; set => _name = value; }
+        public string Phone_Number { get => _phone_Number; set => _phone_Number = value; }
+    }
+
+    class AdminLoginSuperEx:AdminLoginEx
+    {
+        
     }
 
     class Program
